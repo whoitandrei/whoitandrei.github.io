@@ -164,3 +164,25 @@ footer {
     margin: 0;
     font-size: 14px;
 }*/
+
+/* for mobile phones */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Уменьшаем размер шрифта */
+    }
+
+    header {
+        flex-direction: column; /* Меняем направление flex-контейнера */
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column; /* Меню в столбик */
+    }
+
+    #time-widget {
+        bottom: 10px; /* Сдвигаем окошко времени выше */
+        left: 10px;
+        padding: 5px;
+    }
+}
