@@ -1,4 +1,3 @@
-/* Общие стили */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -138,68 +137,43 @@ footer {
     font-style: italic;
 }
 
-
-
-/*#weather-widget {
-    position: fixed;
-    bottom: 60px; 
-    left: 20px;
-    background-color: rgba(255, 255, 255, 0.8); 
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-}
-
-#weather-content {
-    text-align: center;
-}
-
-#weather-content h3 {
-    margin: 0 0 10px;
-    font-size: 16px;
-}
-
-#weather-description, #weather-temp {
-    margin: 0;
-    font-size: 14px;
-}*/
-
 /* for mobile phones */
-/* Кнопка меню (скрыта на десктопе) */
 #menu-toggle {
-    display: none; /* Скрыта по умолчанию */
+    display: none; 
     background: none;
     border: none;
     font-size: 24px;
     cursor: pointer;
-    color: #fff;
+    color: #000;
+    position: absolute;
+    top: 10px; 
+    right: 10px; 
+    z-index: 1001; 
 }
 
 
 @media (max-width: 768px) {
     body {
-        font-size: 14px; /* Уменьшаем размер шрифта */
+        font-size: 14px;
     }
 
     header {
-        flex-direction: column; /* Меняем направление flex-контейнера */
-        align-items: center;
+        position: relative; 
     }
 
     nav ul {
-        flex-direction: column; /* Меню в столбик */
+        flex-direction: column;
     }
 
     #menu-toggle {
-        display: block; /* Показываем кнопку на мобильных */
+        display: block; 
     }
 
     #main-nav {
-        display: none; /* Скрываем меню по умолчанию */
+        display: none;
         position: absolute;
-        top: 60px; /* Под header */
-        right: 20px;
+        top: 50px;
+        right: 10px;
         background-color: rgba(255, 255, 255, 0.9);
         border-radius: 8px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -213,6 +187,6 @@ footer {
     }
 
     #main-nav.active {
-        display: block; /* Показываем меню при активации */
+        display: block; 
     }
 }
