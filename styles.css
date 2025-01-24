@@ -166,6 +166,16 @@ footer {
 }*/
 
 /* for mobile phones */
+/* Кнопка меню (скрыта на десктопе) */
+#menu-toggle {
+    display: none; /* Скрыта по умолчанию */
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
 @media (max-width: 768px) {
     body {
         font-size: 14px; /* Уменьшаем размер шрифта */
@@ -180,4 +190,28 @@ footer {
         flex-direction: column; /* Меню в столбик */
     }
 
+    #menu-toggle {
+        display: block; /* Показываем кнопку на мобильных */
+    }
+
+    #main-nav {
+        display: none; /* Скрываем меню по умолчанию */
+        position: absolute;
+        top: 60px; /* Под header */
+        right: 20px;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        z-index: 1000;
+    }
+
+    #main-nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #main-nav.active {
+        display: block; /* Показываем меню при активации */
+    }
 }
